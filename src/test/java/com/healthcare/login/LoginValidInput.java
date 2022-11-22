@@ -1,4 +1,4 @@
-package com.healthcare;
+package com.healthcare.login;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.IOException;
 
-public class LoginValidationInput {
+public class LoginValidInput {
     public static void main(String[] args) throws InterruptedException, IOException {
 
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
@@ -15,13 +15,13 @@ public class LoginValidationInput {
         driver.get("http://localhost:4200/login");
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
-        WebElement fname = driver.findElement(By.name("userId"));
-        js.executeScript("document.getElementsByName('userId')[0].setAttribute('type', 'text')");
-        fname.sendKeys("esahgesge");
+        WebElement userID = driver.findElement(By.name("userId"));
+//        js.executeScript("document.getElementsByName('userId')[0].setAttribute('type', 'text')");
+        userID.sendKeys("123456789102");
 
-        WebElement lname = driver.findElement(By.name("userPassword"));
-        js.executeScript("document.getElementsByName('userPassword')[0].setAttribute('type', 'number')");
-        lname.sendKeys("87686876");
+        WebElement password = driver.findElement(By.name("userPassword"));
+//        js.executeScript("document.getElementsByName('userPassword')[0].setAttribute('pattern', '(.*?)')");
+        password.sendKeys("123abcABC@");
 
 //        Thread.sleep(1000);
 //
@@ -35,10 +35,11 @@ public class LoginValidationInput {
 //        //Entering input into the password field
 //        password_field.sendKeys("Abcdefgh@2021"); // Valid password
 
-        WebElement signup_button = driver.findElement(By.id("login"));
+        Thread.sleep(1000);
+        WebElement login_button = driver.findElement(By.id("login"));
 
-//        Thread.sleep(1000);
-        signup_button.click(); //Clicking on the 'submit' button
+        Thread.sleep(1000);
+        login_button.click(); //Clicking on the 'submit' button
 
         Thread.sleep(10000);
 //        driver.close();
