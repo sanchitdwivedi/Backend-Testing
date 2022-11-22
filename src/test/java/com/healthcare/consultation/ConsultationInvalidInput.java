@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.io.IOException;
 
-public class ConsultationValidInput {
+public class ConsultationInvalidInput {
     public static void main(String[] args) throws InterruptedException, IOException {
 
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
@@ -52,6 +52,10 @@ public class ConsultationValidInput {
         dynamicButton.click();
 
         Thread.sleep(1000);
+
+        WebElement date = driver.findElement(By.name("date"));
+        js.executeScript("document.getElementsByName('date')[0].readOnly=false");
+        date.sendKeys("18-11-2022");
 
         Select diagnosisType = new Select(driver.findElement(By.name("diagnosisType")));
         diagnosisType.selectByIndex(1);
