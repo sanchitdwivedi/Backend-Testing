@@ -18,11 +18,9 @@ public class AdminValidInput {
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         WebElement userID = driver.findElement(By.name("userId"));
-//        js.executeScript("document.getElementsByName('userId')[0].setAttribute('type', 'text')");
         userID.sendKeys("123456789103");
 
         WebElement password = driver.findElement(By.name("userPassword"));
-//        js.executeScript("document.getElementsByName('userPassword')[0].setAttribute('pattern', '(.*?)')");
         password.sendKeys("123abcABC@");
 
         WebElement login_button = driver.findElement(By.id("login"));
@@ -60,30 +58,24 @@ public class AdminValidInput {
         roleName.selectByValue("secondary specialist");
 
         WebElement mobileNo = driver.findElement(By.name("mobileNo"));
-//        js.executeScript("document.getElementsByName('followUp')[0].valueAsDate = new Date().toISOString().substring(0,10)')");
         mobileNo.sendKeys("9915296341");
 
         WebElement email = driver.findElement(By.name("email"));
-//        js.executeScript("document.getElementsByName('followUp')[0].valueAsDate = new Date().toISOString().substring(0,10)')");
         email.sendKeys("testing@doctor.com");
 
         Select hospitalId = new Select(driver.findElement(By.name("hospitalId")));
         hospitalId.selectByIndex(0);
 
         WebElement city = driver.findElement(By.name("city"));
-//        js.executeScript("document.getElementsByName('followUp')[0].valueAsDate = new Date().toISOString().substring(0,10)')");
         city.sendKeys("Bangalore");
 
         WebElement district = driver.findElement(By.name("district"));
-//        js.executeScript("document.getElementsByName('followUp')[0].valueAsDate = new Date().toISOString().substring(0,10)')");
         district.sendKeys("Bangalore");
 
         WebElement state = driver.findElement(By.name("state"));
-//        js.executeScript("document.getElementsByName('followUp')[0].valueAsDate = new Date().toISOString().substring(0,10)')");
         state.sendKeys("Karnataka");
 
         WebElement pincode = driver.findElement(By.name("pincode"));
-//        js.executeScript("document.getElementsByName('followUp')[0].valueAsDate = new Date().toISOString().substring(0,10)')");
         pincode.sendKeys("560100");
 
         Thread.sleep(1000);
@@ -92,6 +84,5 @@ public class AdminValidInput {
         addDoctor.click();
 
         Thread.sleep(10000);
-//        driver.close();
     }
 }

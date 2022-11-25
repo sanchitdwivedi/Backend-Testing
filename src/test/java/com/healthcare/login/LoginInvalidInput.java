@@ -25,9 +25,8 @@ public class LoginInvalidInput {
         password.sendKeys("123abc123abc");
 
         WebElement login_button = driver.findElement(By.id("login"));
-        login_button.click(); //Clicking on the 'submit' button
+        login_button.click(); //Clicking on the 'login' button
 
         Thread.sleep(10000);
-//        driver.close();
     }
 }
