@@ -1,9 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
--- Host: localhost    Database: healthcaredb
+-- Host: 127.0.0.1    Database: healthcaredb
 -- ------------------------------------------------------
--- Server version	8.0.27
-use healthcaredb;
+-- Server version	8.0.31
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -22,7 +21,7 @@ use healthcaredb;
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES (1,'a@b.c','Admin','1','Terminator',9999999999,560100,4),(2,'a@b.c','Program','0','Manager',9999999999,140126,5);
+INSERT INTO `admin` VALUES (1,'a@b.c','Admin','1','Terminator',9999999999,560100,4),(2,'a@b.c','Program','0','Manager',9999999999,140126,5),(3,'testingAdmin@gmail.com','Testing','MALE','Admin',9915296341,560100,10);
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -32,7 +31,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `consultation_form` WRITE;
 /*!40000 ALTER TABLE `consultation_form` DISABLE KEYS */;
-INSERT INTO `consultation_form` VALUES (6,'no','2022-04-20 05:30:00.000000',2,'examination','2022-04-22 05:30:00.000000','I63','descriotion','summary',0,'[{\"medicineName\":\"dolo\",\"dosage\":\"1-0-1\",\"remarks\":\"afternoon\",\"duration\":\"3\"}]','[]','reamark','inst',1,1,4,NULL),(7,'no','2022-04-20 05:30:00.000000',3,'examination',NULL,'I63','descriotion','summary',0,'[{\"medicineName\":\"dolo\",\"dosage\":\"1-0-1\",\"remarks\":\"afternoon\",\"duration\":\"3\"}]','[{\"uuid\":2,\"options\":[1,2,3]},{\"uuid\":3,\"options\":[17,18,19,20,21]},{\"uuid\":5,\"options\":[]},{\"uuid\":8,\"options\":[22]},{\"uuid\":10,\"options\":[22]},{\"uuid\":13,\"options\":[24,25,26,27]},{\"uuid\":15,\"options\":[22]},{\"uuid\":16,\"options\":[]}]','remarks','inst',1,1,4,2),(8,'no','2022-04-20 05:30:00.000000',3,'examination','2022-04-23 05:30:00.000000','I63','descriotion','csaa',1,'[]','[{\"uuid\":2,\"options\":[4,5]},{\"uuid\":22,\"options\":[4,5,36]},{\"uuid\":23,\"options\":[61,62,63]},{\"uuid\":24,\"options\":[]}]','dry','inst',1,1,4,NULL),(10,'consul','2022-04-26 05:30:00.000000',1,'examination','2022-04-28 05:30:00.000000','I63','descriotion','csaa',2,'[{\"medicineName\":\"dolo\",\"dosage\":\"1-0-1\",\"remarks\":\"fdsv\",\"duration\":\"6\"}]','[]','egsr','inst',1,1,4,NULL),(11,'consul','2022-04-26 05:30:00.000000',3,'examination',NULL,'I63','descriotion','dgr',2,'[]','[]','','inst',1,1,4,3),(12,'no','2022-04-27 05:30:00.000000',3,'examination',NULL,'R51','descriotion','csaa',1,'[]','[]','t34','inst',1,1,4,3),(13,'consul','2022-04-27 05:30:00.000000',1,'examination','2022-04-28 05:30:00.000000','G40','descriotion','csaa',1,'[]','[{\"uuid\":2,\"options\":[1,2,3]},{\"uuid\":3,\"options\":[19,20]},{\"uuid\":4,\"options\":[23]},{\"uuid\":7,\"options\":[]}]','3465','inst',1,1,4,NULL),(14,'no','2022-04-28 05:30:00.000000',2,'examination',NULL,'R51','descriotion','csaa',1,'[]','[{\"uuid\":2,\"options\":[1,2]},{\"uuid\":3,\"options\":[16,17,18,19,20]},{\"uuid\":5,\"options\":[]},{\"uuid\":8,\"options\":[22]},{\"uuid\":10,\"options\":[22]},{\"uuid\":13,\"options\":[24,25,26,27]},{\"uuid\":15,\"options\":[22]},{\"uuid\":16,\"options\":[]}]','ts5','inst',1,1,4,NULL);
+INSERT INTO `consultation_form` VALUES (6,'no','2022-04-20 05:30:00.000000',2,'examination','2022-04-22 05:30:00.000000','I63','descriotion','summary',0,'[{\"medicineName\":\"dolo\",\"dosage\":\"1-0-1\",\"remarks\":\"afternoon\",\"duration\":\"3\"}]','[]','reamark','inst',1,1,4,NULL),(8,'no','2022-04-20 05:30:00.000000',3,'examination','2022-04-23 05:30:00.000000','I63','descriotion','csaa',1,'[]','[{\"uuid\":2,\"options\":[4,5]},{\"uuid\":22,\"options\":[4,5,36]},{\"uuid\":23,\"options\":[61,62,63]},{\"uuid\":24,\"options\":[]}]','dry','inst',1,1,4,NULL),(10,'consul','2022-04-26 05:30:00.000000',1,'examination','2022-04-28 05:30:00.000000','I63','descriotion','csaa',2,'[{\"medicineName\":\"dolo\",\"dosage\":\"1-0-1\",\"remarks\":\"fdsv\",\"duration\":\"6\"}]','[]','egsr','inst',1,1,4,NULL),(14,'no','2022-04-28 05:30:00.000000',2,'examination',NULL,'R51','descriotion','csaa',1,'[]','[{\"uuid\":2,\"options\":[1,2]},{\"uuid\":3,\"options\":[16,17,18,19,20]},{\"uuid\":5,\"options\":[]},{\"uuid\":8,\"options\":[22]},{\"uuid\":10,\"options\":[22]},{\"uuid\":13,\"options\":[24,25,26,27]},{\"uuid\":15,\"options\":[22]},{\"uuid\":16,\"options\":[]}]','ts5','inst',1,1,4,NULL),(16,'ert','2022-11-22 05:30:00.000000',1,'ter','2022-11-23 05:30:00.000000','R51','ert','csa',1,'[]','[]','sac','ert',5,2,5,NULL),(17,'testCompliant','2022-11-22 05:30:00.000000',1,'testExamination','2022-12-27 05:30:00.000000','I63','testICDDescription','testIllnessSummary',1,'[]','[]','testRemarks','testInstructions',5,2,5,NULL),(18,'testCompliant','2022-11-22 05:30:00.000000',1,'testExamination','2022-12-27 05:30:00.000000','I63','testICDDescription','testIllnessSummary',1,'[]','[]','testRemarks','testInstructions',5,2,5,NULL),(19,'testCompliant','2022-11-22 05:30:00.000000',1,'testExamination','2022-12-27 05:30:00.000000','I63','testICDDescription','testIllnessSummary',1,'[]','[]','testRemarks','testInstructions',5,2,5,NULL),(20,'testCompliant','2022-11-22 05:30:00.000000',1,'testExamination','2022-12-27 05:30:00.000000','I63','testICDDescription','testIllnessSummary',1,'[]','[]','testRemarks','testInstructions',5,2,5,NULL),(21,'testCompliant','2022-11-22 05:30:00.000000',1,'testExamination','2022-12-27 05:30:00.000000','I63','testICDDescription','testIllnessSummary',1,'[]','[]','testRemarks','testInstructions',5,2,5,NULL),(22,'testCompliant','2022-11-18 05:30:00.000000',1,'testExamination','2022-12-27 05:30:00.000000','I63','testICDDescription','testIllnessSummary',1,'[]','[]','testRemarks','testInstructions',5,2,5,NULL),(23,'testCompliant','2022-11-18 05:30:00.000000',1,'testExamination','2022-12-27 05:30:00.000000','I63','testICDDescription','testIllnessSummary',1,'[]','[]','testRemarks','testInstructions',5,2,5,NULL);
 /*!40000 ALTER TABLE `consultation_form` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -42,7 +41,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `doctor` WRITE;
 /*!40000 ALTER TABLE `doctor` DISABLE KEYS */;
-INSERT INTO `doctor` VALUES (1,'Nangal','Ropar','sanchitdwivedi123@gmail.com','Sanchit','MALE','Dwivedi',9915296341,140126,'Punjab',1,1),(2,'Nangal','Ropar','sanchitdwivedi123@gmail.com','Doctor','MALE','New',9915296341,140126,'Punjab',2,1),(3,'Nangal','Nangal','sanchitdwivedi123@gmail.com','Amit','MALE','Chaudhary',9915296341,140126,'Punjab',6,2),(4,'Nangal','Ropar','sanchitdwivedi123@gmail.com','Medical','MALE','Officer',9915296341,140126,'Punjab',8,1);
+INSERT INTO `doctor` VALUES (1,'Nangal','Ropar','sanchitdwivedi123@gmail.com','Sanchit','MALE','Dwivedi',9915296341,140126,'Punjab',1,1),(2,'Nangal','Ropar','sanchitdwivedi123@gmail.com','Doctor','MALE','New',9915296341,140126,'Punjab',2,1),(3,'Nangal','Nangal','sanchitdwivedi123@gmail.com','Amit','MALE','Chaudhary',9915296341,140126,'Punjab',6,2),(4,'Nangal','Ropar','sanchitdwivedi123@gmail.com','Medical','MALE','Officer',9915296341,140126,'Punjab',8,1),(5,'BANGALORE','Bangalore','tester@email.com','Testing','MALE','Doctor',9915296341,560100,'KARNATAKA',9,2),(6,'Bangalore','Bangalore','testing@doctor.com','Testing','MALE','lastName',9915296341,560100,'Karnataka',11,1);
 /*!40000 ALTER TABLE `doctor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -72,7 +71,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `national_health_record` WRITE;
 /*!40000 ALTER TABLE `national_health_record` DISABLE KEYS */;
-INSERT INTO `national_health_record` VALUES (1,'365473499564','Bangalore','Chandigarh','Ropar','1999-05-02','M.Tech','Prakhar',1,'Lad',9915296341,140126,0,'punjab');
+INSERT INTO `national_health_record` VALUES (1,'365473499564','Bangalore','Chandigarh','Ropar','1999-05-02','M.Tech','Prakhar',1,'Lad',9915296341,140126,0,'punjab'),(2,'365473499569','Bangalore','Chandigarh','Ropar','1999-05-02','M.Tech','Testing',1,'Patient',9915296341,140126,1,'punjab');
 /*!40000 ALTER TABLE `national_health_record` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -82,7 +81,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `patient` WRITE;
 /*!40000 ALTER TABLE `patient` DISABLE KEYS */;
-INSERT INTO `patient` VALUES (4,'365473499564','Bangalore','Chandigarh','Ropar','1999-05-02 05:30:00.000000','M.Tech','Prakhar','FEMALE','Sanchit','Lad',9915296341,140126,'None','BELOW_POVERTY_LINE','punjab');
+INSERT INTO `patient` VALUES (4,'365473499564','Bangalore','Chandigarh','Ropar','1999-05-02 05:30:00.000000','M.Tech','Prakhar','FEMALE','Sanchit','Lad',9915296341,140126,'None','BELOW_POVERTY_LINE','punjab'),(5,'365473499569','Bangalore','Chandigarh','Ropar','1999-05-02 05:30:00.000000','M.Tech','Testing','FEMALE','Sanchit','Patient',9915296341,140126,'None','ABOVE_POVERTY_LINE','punjab');
 /*!40000 ALTER TABLE `patient` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,7 +141,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,1,'$2a$12$N4Aey/heSsG.mgsSx01YGOyu4AJH6rQauwruUhT3qmeQVYkWrmKpi',1,365473499562,1),(2,1,'$2a$12$YQ5roJMPfv9TKfKQoCP6sehK57NiUbyUGDRNQdTg7pVrF4uaEyk.6',1,365473499563,1),(3,1,'$2a$12$YnU7Ms9VyaPQKVZ34ERW5us.mKpV.VIoZe1uq4bGRz02KdZyJpyye',0,777777777777,1),(4,1,'$2a$12$N4Aey/heSsG.mgsSx01YGOyu4AJH6rQauwruUhT3qmeQVYkWrmKpi',1,365473499564,4),(5,1,'$2a$12$N4Aey/heSsG.mgsSx01YGOyu4AJH6rQauwruUhT3qmeQVYkWrmKpi',1,365473499565,5),(6,1,'$2a$12$T78qOko9ZtrtqCRtAEhPGe2s3r.MW/QwBO9pXCZL2apmZMLAr3..C',0,123454321123,3),(8,1,'$2a$12$fLdYl.JXzOy6cjYk73Ry1Op0u4KzKxHbUIj5NT4PYS.nlD1NIQ1V.',1,365473499568,6);
+INSERT INTO `user` VALUES (1,1,'$2a$12$N4Aey/heSsG.mgsSx01YGOyu4AJH6rQauwruUhT3qmeQVYkWrmKpi',1,365473499562,1),(2,1,'$2a$12$YQ5roJMPfv9TKfKQoCP6sehK57NiUbyUGDRNQdTg7pVrF4uaEyk.6',1,365473499563,1),(3,1,'$2a$12$YnU7Ms9VyaPQKVZ34ERW5us.mKpV.VIoZe1uq4bGRz02KdZyJpyye',0,777777777777,1),(4,1,'$2a$12$N4Aey/heSsG.mgsSx01YGOyu4AJH6rQauwruUhT3qmeQVYkWrmKpi',1,365473499564,4),(5,1,'$2a$12$N4Aey/heSsG.mgsSx01YGOyu4AJH6rQauwruUhT3qmeQVYkWrmKpi',1,365473499565,5),(6,1,'$2a$12$T78qOko9ZtrtqCRtAEhPGe2s3r.MW/QwBO9pXCZL2apmZMLAr3..C',0,123454321123,3),(8,1,'$2a$12$fLdYl.JXzOy6cjYk73Ry1Op0u4KzKxHbUIj5NT4PYS.nlD1NIQ1V.',1,365473499568,6),(9,1,'$2a$12$TkXzeOtOwFkYzjUb6jeH/ujBx708YBVLbsydPH25oyvf2Gaas5ESS',1,123456789102,1),(10,1,'$2a$12$EYEt5x7/DateOY40L7b.Q.On18OpspsrclITA3s7H8Jtm0ZvDlL66',1,123456789103,4),(11,1,'$2a$12$0DpDuG9YTlPUrlhj/Vms5uzh88NHkgTjuNnj6gNaMJ0lA3bKOxSBK',0,123456789106,1);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -155,4 +154,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-05-07 19:59:33
+-- Dump completed on 2022-11-29 14:35:36
